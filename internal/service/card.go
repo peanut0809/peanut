@@ -13,6 +13,7 @@ import (
 type (
 	ICard interface {
 		Create(ctx context.Context, in model.CardCreateInput) (out bool, err error)
+		GetList(ctx context.Context, in model.CardGetListInput) (out *model.CardGetListOutput, err error)
 	}
 )
 

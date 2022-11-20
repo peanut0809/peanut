@@ -49,3 +49,20 @@ func (a *cCard) Create(ctx context.Context, req *v1.CardReq) (res *v1.CardCreate
 	}
 	return &v1.CardCreateRes{out}, nil
 }
+
+func (a *cCard) Items(ctx context.Context, req *v1.CardGetListCommonReq) (res *v1.CardGetListCommonRes, err error) {
+	out, err := service.Card().GetList(ctx, model.CardGetListInput{
+		CardName: req.CardName,
+		Page:     req.Page,
+		Size:     req.Size,
+	})
+	if err != nil {
+		return nil, err
+	}
+	return &v1.CardGetListCommonRes{
+		Page:  out.Page,
+		Size:  out.Size,
+		Total: out.Total,
+		List:  "",
+	}, nil
+}
