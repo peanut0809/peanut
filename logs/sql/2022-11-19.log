@@ -1,0 +1,54 @@
+2022-11-19 21:03:07.640 [ERRO] {98ac14940bfe2817e670b9095e75ed05} [ 16 ms] [default] [focus] [rows:0  ] BEGIN
+Error: Error 1045: Access denied for user 'root'@'localhost' (using password: YES)
+Stack:
+1.  github.com/gogf/gf/v2/database/gdb.(*Core).writeSqlToLogger
+    /Users/love.xiaohuasheng/go_dev/pkg/mod/github.com/gogf/gf/v2@v2.2.4/database/gdb/gdb_core.go:663
+2.  github.com/gogf/gf/v2/database/gdb.(*Core).DoCommit
+    /Users/love.xiaohuasheng/go_dev/pkg/mod/github.com/gogf/gf/v2@v2.2.4/database/gdb/gdb_core_underlying.go:278
+3.  github.com/gogf/gf/v2/database/gdb.(*Core).doBeginCtx
+    /Users/love.xiaohuasheng/go_dev/pkg/mod/github.com/gogf/gf/v2@v2.2.4/database/gdb/gdb_core_transaction.go:55
+4.  github.com/gogf/gf/v2/database/gdb.(*Core).Transaction
+    /Users/love.xiaohuasheng/go_dev/pkg/mod/github.com/gogf/gf/v2@v2.2.4/database/gdb/gdb_core_transaction.go:82
+5.  golang8090/internal/logic/card.(*sCard).Create
+    /Users/love.xiaohuasheng/go_dev/src/golang8090/internal/logic/card/card.go:27
+6.  golang8090/internal/controller.(*cCard).Create
+    /Users/love.xiaohuasheng/go_dev/src/golang8090/internal/controller/card.go:17
+7.  github.com/gogf/gf/v2/net/ghttp.(*middleware).callHandlerFunc.func1
+    /Users/love.xiaohuasheng/go_dev/pkg/mod/github.com/gogf/gf/v2@v2.2.4/net/ghttp/ghttp_request_middleware.go:152
+8.  github.com/gogf/gf/v2/net/ghttp.niceCallFunc
+    /Users/love.xiaohuasheng/go_dev/pkg/mod/github.com/gogf/gf/v2@v2.2.4/net/ghttp/ghttp_func.go:55
+9.  github.com/gogf/gf/v2/net/ghttp.(*middleware).callHandlerFunc
+    /Users/love.xiaohuasheng/go_dev/pkg/mod/github.com/gogf/gf/v2@v2.2.4/net/ghttp/ghttp_request_middleware.go:129
+10. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1
+    /Users/love.xiaohuasheng/go_dev/pkg/mod/github.com/gogf/gf/v2@v2.2.4/net/ghttp/ghttp_request_middleware.go:75
+11. github.com/gogf/gf/v2/util/gutil.TryCatch
+    /Users/love.xiaohuasheng/go_dev/pkg/mod/github.com/gogf/gf/v2@v2.2.4/util/gutil/gutil.go:56
+12. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next
+    /Users/love.xiaohuasheng/go_dev/pkg/mod/github.com/gogf/gf/v2@v2.2.4/net/ghttp/ghttp_request_middleware.go:49
+13. github.com/gogf/gf/v2/net/ghttp.MiddlewareHandlerResponse
+    /Users/love.xiaohuasheng/go_dev/pkg/mod/github.com/gogf/gf/v2@v2.2.4/net/ghttp/ghttp_middleware_handler_response.go:25
+14. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1.1
+    /Users/love.xiaohuasheng/go_dev/pkg/mod/github.com/gogf/gf/v2@v2.2.4/net/ghttp/ghttp_request_middleware.go:55
+15. github.com/gogf/gf/v2/net/ghttp.niceCallFunc
+    /Users/love.xiaohuasheng/go_dev/pkg/mod/github.com/gogf/gf/v2@v2.2.4/net/ghttp/ghttp_func.go:55
+16. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1
+    /Users/love.xiaohuasheng/go_dev/pkg/mod/github.com/gogf/gf/v2@v2.2.4/net/ghttp/ghttp_request_middleware.go:54
+17. github.com/gogf/gf/v2/util/gutil.TryCatch
+    /Users/love.xiaohuasheng/go_dev/pkg/mod/github.com/gogf/gf/v2@v2.2.4/util/gutil/gutil.go:56
+18. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next
+    /Users/love.xiaohuasheng/go_dev/pkg/mod/github.com/gogf/gf/v2@v2.2.4/net/ghttp/ghttp_request_middleware.go:49
+19. github.com/gogf/gf/v2/net/ghttp.internalMiddlewareServerTracing
+    /Users/love.xiaohuasheng/go_dev/pkg/mod/github.com/gogf/gf/v2@v2.2.4/net/ghttp/ghttp_middleware_tracing.go:78
+20. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1.5
+    /Users/love.xiaohuasheng/go_dev/pkg/mod/github.com/gogf/gf/v2@v2.2.4/net/ghttp/ghttp_request_middleware.go:96
+21. github.com/gogf/gf/v2/net/ghttp.niceCallFunc
+    /Users/love.xiaohuasheng/go_dev/pkg/mod/github.com/gogf/gf/v2@v2.2.4/net/ghttp/ghttp_func.go:55
+22. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1
+    /Users/love.xiaohuasheng/go_dev/pkg/mod/github.com/gogf/gf/v2@v2.2.4/net/ghttp/ghttp_request_middleware.go:95
+23. github.com/gogf/gf/v2/util/gutil.TryCatch
+    /Users/love.xiaohuasheng/go_dev/pkg/mod/github.com/gogf/gf/v2@v2.2.4/util/gutil/gutil.go:56
+24. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next
+    /Users/love.xiaohuasheng/go_dev/pkg/mod/github.com/gogf/gf/v2@v2.2.4/net/ghttp/ghttp_request_middleware.go:49
+25. github.com/gogf/gf/v2/net/ghttp.(*Server).ServeHTTP
+    /Users/love.xiaohuasheng/go_dev/pkg/mod/github.com/gogf/gf/v2@v2.2.4/net/ghttp/ghttp_server_handler.go:132
+

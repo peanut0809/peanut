@@ -1,4 +1,9 @@
 
-# CLI tool, only in development environment.
-# https://goframe.org/pages/viewpage.action?pageId=3673173
+# GoFrame CLI tool configuration.
 gfcli:
+  gen:
+    dao:
+    - link:            "mysql:root:1111111q@tcp(127.0.0.1:3306)/em_markting"
+      removePrefix:    "gf_"
+      descriptionTag:  true
+      noModelComment:  true

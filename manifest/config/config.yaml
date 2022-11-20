@@ -7,5 +7,9 @@ logger:
   level : "all"
   stdout: true
 
-
+# 数据库连接配置
+database:
+  default:
+    link:   "mysql:root:1111111q@tcp(127.0.0.1:3306)/em_markting"
+    debug:  true
 
